@@ -54,8 +54,9 @@ body {
     color: #fff;
     display: none;
 }
-.header .inner .pc_gnb .gnb .depth01:hover.depth02 {
+.header .inner .pc_gnb .gnb .depth01:hover .depth02 {
     display: block;
+    z-index: 999;
 }
 .header .inner .pc_gnb .gnb .depth01 .depth02 li {
     padding: 15px 0;
@@ -73,6 +74,7 @@ body {
 /*💥💥💥 main 💥💥💥*/
 .cont01 {
     position: relative;
+    z-index: -1;
 }
 .cont01 figure {
     height: 100vh;
