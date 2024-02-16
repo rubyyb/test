@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CJ ENM</title>
+    <link rel="stylesheet" href="css/연습.css">
+    <script>
+        window.onload = () => {
+            let menu = document.querySelector('.btn .menu_btn');
+            let mobileGnb = document.querySelector('.mobile_gnb');
+            let depth01 = document.querySelectorAll('.mobile_gnb .depth01 > a');
+            let depth02 = document.querySelectorAll('.mobile_gnb .depth02');
+        
+            menu.addEventListener('click', () => {
+                mobileGnb.classList.toggle('on');
+            });
+
+            for(let i = 0; i < depth01.length; i++) {
+                depth01[i].addEventListener('mouseenter', () => {
+                    // depth01[i].nextElementSibling.classList.toggle('on');
+                    if(getComputedStyle(depth02[i]).display === 'none') {
+                        depth02.forEach((item) => {
+                            item.classList.remove('on');
+                        });
+                        depth01[i].nextElementSibling.classList.add('on');
+
+                    } else {
+                        depth01[i].nextElementSibling.classList.remove('on');
+                    }
+                })
+            };
+        };//script end
+    </script>
+</head>
+<body>
+    <div id="wrap">
+        <header class="header">
+            <div class="inner">
+                <h1>
+                    <a href="#">
+                        <img src="img/로고.png" alt="">
+                    </a>
+                </h1>
+
+                <nav class="pc_gnb">
+                    <ul class="gnb">  
+                        <li class="depth01">
+                            <a href="#">프로그램</a>
+                            <ul class="depth02">
+                                <li><a href="#">개막식</a></li>
+                                <li><a href="#">아트마켓</a></li>
+                                <li><a href="#">KoCACA 교류협력 네트워킹</a></li>
+                                <li><a href="#">KoCACA 공식초청작</a></li>
+                                <li><a href="#">KoCACA 프린지 페스티벌</a></li>
+                            </ul><!-- depth02 end -->
+                        </li><!-- depth01 end -->
+                        
+                        <li class="depth01">
+                            <a href="#">공모신청 온라인 플랫폼</a>
+                            <ul class="depth02">
+                                <li><a href="#">온라인공모신청 안내</a></li>
+                                <li><a href="#">아트마켓 참가신청</a></li>
+                            </ul><!-- depth02 end -->
+                        </li><!-- depth01 end -->
+                        
+                        <li class="depth01">
+                            <a href="#">온라인 유통 플랫폼</a>
+                            <ul class="depth02">
+                                <li><a href="#">아트마켓 기관</a></li>
+                                <li><a href="#">아트마켓 단체</a></li>
+                                <li><a href="#">아트마켓 쇼케이스</a></li>
+                                <li><a href="#">아트마켓 레퍼토리피칭</a></li>
+                                <li><a href="#">KoCACA프린지</a></li>
+                            </ul><!-- depth02 end -->
+                        </li><!-- depth01 end -->
+                        
+                        <li class="depth01">
+                            <a href="#">커뮤니티</a>
+                            <ul class="depth02">
+                                <li><a href="#">공지사항</a></li>
+                                <li><a href="#">언론보도</a></li>
+                                <li><a href="#">Q&A</a></li>
+                                <li><a href="#">문의사항</a></li>
+                                <li><a href="#">자료실</a></li>
+                            </ul><!-- depth02 end -->
+                        </li><!-- depth01 end -->
+                        
+                        <li class="depth01">
+                            <a href="#">소개</a>
+                            <ul class="depth02">
+                                <li><a href="#">소개</a></li>
+                                <li><a href="#">프로그램 일정</a></li>
+                                <li><a href="#">조직도</a></li>
+                                <li><a href="#">ARCHIVE</a></li>
+                                <li><a href="#">PHOTO</a></li>
+                            </ul><!-- depth02 end -->
+                        </li><!-- depth01 end -->
+                    </ul><!-- gnb end -->
+                </nav><!-- pc_gnb -->
+                <div class="btn">
+                    <button class="mode_btn">
+                        <img src="img/24.02.05_수업_달아이콘.png" alt="">
+                    </button><!-- mode_btn end -->
+    
+                    <button class="mobile menu_btn">
+                        <img src="img/24.01.11_ 수업_매뉴선.png" alt="">
+                    </button><!-- menu_btn end -->  
+                </div><!-- btn end -->
+
+                <nav class="mobile mobile_gnb">
+                    <ul class="gnb">  
+                        <li class="depth01">
+                            <a href="#">프로그램</a>
+                            <ul class="depth02">
+                                <li><a href="#">개막식</a></li>
+                                <li><a href="#">아트마켓</a></li>
+                                <li><a href="#">KoCACA 교류협력네트워킹</a></li>
+                                <li><a href="#">KoCACA 공식초청작</a></li>
+                                <li><a href="#">KoCACA 프린지 페스티벌</a></li>
+                            </ul><!-- depth02 end -->
+                        </li><!-- depth01 end -->
+                        
+                        <li class="depth01">
+                            <a href="#">공모신청 온라인 플랫폼</a>
+                            <ul class="depth02">
+                                <li><a href="#">온라인공모신청 안내</a></li>
+                                <li><a href="#">아트마켓 참가신청</a></li>
+                            </ul><!-- depth02 end -->
+                        </li><!-- depth01 end -->
+                        
+                        <li class="depth01">
+                            <a href="#">온라인 유통 플랫폼</a>
+                            <ul class="depth02">
+                                <li><a href="#">아트마켓 기관</a></li>
+                                <li><a href="#">아트마켓 단체</a></li>
+                                <li><a href="#">아트마켓 쇼케이스</a></li>
+                                <li><a href="#">아트마켓 레퍼토리피칭</a></li>
+                                <li><a href="#">KoCACA프린지</a></li>
+                            </ul><!-- depth02 end -->
+                        </li><!-- depth01 end -->
+                        
+                        <li class="depth01">
+                            <a href="#">커뮤니티</a>
+                            <ul class="depth02">
+                                <li><a href="#">공지사항</a></li>
+                                <li><a href="#">언론보도</a></li>
+                                <li><a href="#">Q&A</a></li>
+                                <li><a href="#">문의사항</a></li>
+                                <li><a href="#">자료실</a></li>
+                            </ul><!-- depth02 end -->
+                        </li><!-- depth01 end -->
+                        
+                        <li class="depth01">
+                            <a href="#">소개</a>
+                            <ul class="depth02">
+                                <li><a href="#">소개</a></li>
+                                <li><a href="#">프로그램 일정</a></li>
+                                <li><a href="#">조직도</a></li>
+                                <li><a href="#">ARCHIVE</a></li>
+                                <li><a href="#">PHOTO</a></li>
+                            </ul><!-- depth02 end -->
+                        </li><!-- depth01 end -->
+                    </ul><!-- gnb end -->
+                </nav><!-- pc_gnb -->
+            </div><!-- inner end -->
+        </header><!-- header end -->
+
+        <main id="main">
+            <section class="cont01">
+                <figure>
+                    <img src="img/메인비주얼 사진.jpeg" alt="">
+                </figure>
+                <h2>JEJU HAEVICHI <br />
+                    ARTS FESTIVAL</h2>
+            </section><!-- cont01 end -->
+        </main><!-- #main end -->
+    </div><!-- #wrap end -->
+</body>
+</html>
